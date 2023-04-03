@@ -1,7 +1,6 @@
+import api.views as av
 from django.urls import include, path
 from rest_framework import routers
-
-import api.views as av
 
 router_v1 = routers.DefaultRouter()
 router_v1.register(r'titles', av.TitleViewSet)

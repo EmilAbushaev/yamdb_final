@@ -1,8 +1,7 @@
 import csv
 
-from django.core.management.base import BaseCommand
-
 import reviews.models as rm
+from django.core.management.base import BaseCommand
 from users.models import User
 
 DIR = 'static/data/'

@@ -1,9 +1,8 @@
+import reviews.models as review_models
+import reviews.validators as reviews_validators
+import users.validators as users_validators
 from django.contrib.auth.validators import UnicodeUsernameValidator
 from rest_framework import serializers
-
-import reviews.validators as reviews_validators
-import reviews.models as review_models
-import users.validators as users_validators
 from users.models import User
 
 

@@ -1,19 +1,18 @@
+import api.filters as af
+import api.permissions as pm
+import api.serializers as sr
+import reviews.models as rm
 from django.contrib.auth.tokens import default_token_generator
-from rest_framework import generics, viewsets, status
-from rest_framework.decorators import permission_classes, api_view, action
+from django.shortcuts import get_object_or_404
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import generics, status, viewsets
+from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.exceptions import ValidationError
 from rest_framework.filters import SearchFilter
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
-from django_filters.rest_framework import DjangoFilterBackend
-from django.shortcuts import get_object_or_404
-
-import api.permissions as pm
-import api.serializers as sr
-import api.filters as af
-import reviews.models as rm
 from users.models import User
-from users.tokens import send_confirmation_code, get_access_token
+from users.tokens import get_access_token, send_confirmation_code
 
 
 class NoPutModelViewSet(viewsets.ModelViewSet):
