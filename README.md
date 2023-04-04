@@ -1,7 +1,7 @@
 ![yamdb workflow](https://github.com/EmilAbushaev/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 # yamdb_final
-yamdb_final
+Адрес сервера 158.160.27.140
 
 # Краткое описание финального проекта по API
 
